@@ -93,5 +93,5 @@ def save_image(image_numpy, image_path, output_resize=None):
 
     image_pil = Image.fromarray(image_numpy)
     if output_resize:
-        image_pil = image_pil.resize(output_resize, )
+        image_pil = image_pil.resize(output_resize, Image.BICUBIC)
     image_pil.save(image_path)
